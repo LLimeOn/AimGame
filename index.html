@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!-- <link rel="stylesheet" type="text/css" href="stl.css"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<style type="text/css">
+html {
+  background-color: #222222;
+}
+</style>
+
+<script type="text/javascript">
+  const screenHeight = window.screen.height;
+  let px1 = 0;
+  let px2 = 0;
+  let px3 = 0;
+  let px4 = 0;
+  let px5 = 0;
+  let px6 = 0;
+  let px7 = 0;
+  let tm = 0;
+  let mimo = 0;
+  let tochka = 0;
+  let minus = 130;
+  function end() {
+    alert("Вы проиграли, вы прожили - " + tm/10 + " секунд\nПопаданий - " + tochka + "!")
+  }
+  setInterval(function(){time.innerHTML = tm/10; tm++;},100);
+  setInterval(function(){
+    px1=px1+1;
+    ig1.style.marginTop = px1+'px';
+    if (px1 > screenHeight-minus) {
+      end();
+    };
+    px2=px2+1;
+    ig2.style.marginTop = px2+'px';
+    if (px2 > screenHeight-minus) {
+      end();
+    };
+    px3=px3+1;
+    ig3.style.marginTop = px3+'px';
+    if (px3 > screenHeight-minus) {
+      end();
+    };
+    px4=px4+1;
+    ig4.style.marginTop = px4+'px';
+    if (px4 > screenHeight-minus) {
+      end();
+    };
+    px5=px5+1;
+    ig5.style.marginTop = px5+'px';
+    if (px5 > screenHeight-minus) {
+      end();
+    };
+    px6=px6+1;
+    ig6.style.marginTop = px6+'px';
+    if (px6 > screenHeight-minus) {
+      end();
+    };
+    px7=px7+1;
+    ig7.style.marginTop = px7+'px';
+    if (px6 > screenHeight-minus) {
+      end();
+    };
+  },15);
+</script>
+<body>
+      <!-- <img src="I.svg" id = "ig1" style = "margin-left: 20px; float: left;" onclick="px1 = 0; ig1.style.marginTop = 0;"> -->
+  <div class="hellom" onclick="mimo++;">
+    <div style="pointer-events: none;">
+    <div class="h" id = "time" style="color:#ffffff; pointer-events: none; user-select: none;"></div>
+    </div><div class="n">
+      <div id = "ig1" style = "margin-left: 5%; float: left; background-color: #fff; width: 15px; height: 15px; user-select: none;" onclick="px1 = 0; ig1.style.marginTop = 0; tochka++;"></div>
+    </div><div class="n">
+      <div id = "ig2" style = "margin-left: 5%; float: left; background-color: #fff; width: 15px; height: 15px; user-select: none;" onclick="px2 = 0; ig2.style.marginTop = 0; tochka++;"></div>
+    </div><div class="n">
+      <div id = "ig3" style = "margin-left: 5%; float: left; background-color: #fff; width: 15px; height: 15px; user-select: none;" onclick="px3 = 0; ig3.style.marginTop = 0; tochka++;"></div>
+    </div><div class="n">
+      <div id = "ig4" style = "margin-left: 5%; float: left; background-color: #fff; width: 15px; height: 15px; user-select: none;" onclick="px4 = 0; ig4.style.marginTop = 0; tochka++;"></div>
+    </div><div class="n">
+      <div id = "ig5" style = "margin-left: 5%; float: left; background-color: #fff; width: 15px; height: 15px; user-select: none;" onclick="px5 = 0; ig5.style.marginTop = 0; tochka++;"></div>
+    </div><div class="n">
+      <div id = "ig6" style = "margin-left: 5%; float: left; background-color: #fff; width: 15px; height: 15px; user-select: none;" onclick="px6 = 0; ig6.style.marginTop = 0; tochka++;"></div>
+    </div><div class="n">
+      <div id = "ig7" style = "margin-left: 5%; float: left; background-color: #fff; width: 15px; height: 15px; user-select: none;" onclick="px7 = 0; ig7.style.marginTop = 0; tochka++;"></div>
+    </div>
+  </div>
+</body>
+</html>
