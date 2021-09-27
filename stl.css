@@ -1,0 +1,48 @@
+.hello {
+	border-radius: 2;
+	width: 20px;
+	height: 20px;
+	background-color: #00ffff;
+}
+html {
+	background-color: #222222;
+}
+.cor {
+   display: flex;
+}
+.parallax div {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+ 
+.parallax div {
+   background-color: #fff;
+   background-size: 105% 105%;
+   z-index: 2;
+   filter: blur(1px);
+}
+
+#ig1 {
+    transform: translate(16px, 24px);
+}
+#ig2 {
+    transform: translate(34px, 8px);
+}
+#ig3 {
+    transform: translate(18px, 31px);
+}
+#ig4 {
+    transform: translate(24px, 15px);
+}
+#ig5 {
+    transform: translate(20px, 12px);
+}
+#ig6 {
+    transform: translate(43px, 31px);
+}
+#ig7 {
+    transform: translate(35px, 23px);
+}
