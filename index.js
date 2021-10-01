@@ -148,14 +148,42 @@ function animate() {
 	})
 }
 
-addEventListener('click', (event) => {
-	const angle = Math.atan2(event.clientY - canvas.height / 2, event.clientX - canvas.width / 2)
-	const velocity = {
-		x: Math.cos(angle) * 4,
-		y: Math.sin(angle) * 4
-	}
-	projectiles.push(new Projectile(canvas.width / 2, canvas.height / 2, 5, 'white', velocity))
+let ax = 0;
+let ay = 0;
+
+function inte() {
+	setInterval(() => {
+		console.log(`${ax} + ${ay}`);
+			const angle = Math.atan2(ay - canvas.height / 2, ax - canvas.width / 2)
+			const velocity = {
+				x: Math.cos(angle) * 4,
+				y: Math.sin(angle) * 4
+			}
+			projectiles.push(new Projectile(canvas.width / 2, canvas.height / 2, 5, 'white', velocity))
+	}, 400)
+}
+
+
+addEventListener('mousemove', (event) => {
+	// const angle = Math.atan2(event.clientY - canvas.height / 2, event.clientX - canvas.width / 2)
+	// const velocity = {
+	// 	x: Math.cos(angle) * 4,
+	// 	y: Math.sin(angle) * 4
+	// }
+	// projectiles.push(new Projectile(canvas.width / 2, canvas.height / 2, 5, 'white', velocity))
+	ax = event.clientX
+	ay = event.clientY
 })
 
+// addEventListener('click', (event) => {
+// 	const angle = Math.atan2(event.clientY - canvas.height / 2, event.clientX - canvas.width / 2)
+// 	const velocity = {
+// 		x: Math.cos(angle) * 4,
+// 		y: Math.sin(angle) * 4
+// 	}
+// 	projectiles.push(new Projectile(canvas.width / 2, canvas.height / 2, 5, 'white', velocity))
+// })
+
+inte()
 animate()
 spawnEnemies()
